@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block navbar %}
+{{ super() }}
+<img src="https://t3.ftcdn.net/jpg/00/97/22/34/240_F_97223487_VdgQEhbKviGLGw2OYYIRIVywmCGQ4ufQ.jpg" class="mimg">
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% for category, msg in messages %}
+<h3 class="{{category}}">{{ msg }}</h3>
+{% endfor %}
+{% endwith %}
+
+{% endblock  %}
